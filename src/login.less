@@ -1,0 +1,149 @@
+@import url('~theme-apollo/less/variable.less');
+
+.login {
+    min-width: 1000px;
+    height: 100%;
+
+    & > div{
+        box-sizing: border-box;
+    }
+    .password-prompt-text {
+        color: @font-color-label;
+        margin-top: @gap-xsmall;
+        font-size: @font-size-small;
+    }
+
+    :global{
+        .logo{
+            height: 92px;
+        }
+
+        .login-main{
+            //height: calc(~"100% - 60px");
+            height: 100%;
+            background-color: @color-black5;
+            overflow: hidden;
+            position: relative;
+
+            .login-sec{
+                width: 408px;
+                height: 540px;
+                position: absolute;
+                left: 50%;
+                top: 45%;
+                margin-left: -204px;
+                margin-top: -300px;
+
+                // logo行
+                & > div:first-child{
+                    text-align: center;
+                }
+
+                // login-form-sec
+                & > div:last-child{
+                    padding: 78px 54px 0;
+                    min-height: 360px;
+                    background-color: @color-white;
+                    border-radius: @border-radius-normal;
+
+                    & > div{
+                        position: relative;
+                    }
+
+                    .icon{
+                        font-size: 14px;
+                        position: absolute;
+                        left: @gap-small;
+                        top: @gap-small;
+                    }
+
+                    .rc-input{
+                        color: @color-black1;
+                        padding-left: 38px;
+                        box-shadow:0 0 0 1000px @color-white inset;
+
+                        &::-webkit-input-placeholder{
+                           color: @color-grey1;
+                        }
+                        &:-ms-input-placeholder{
+                            color: @color-grey1;
+                        }
+                        &:-moz-placeholder{
+                            color: @color-grey1;
+                        }
+                        &::-moz-placeholder{
+                            color: @color-grey1;
+                        }
+                    }
+
+                    .error{
+                        .rc-input{
+                            border: 1px solid @color-danger;
+                        }
+                    }
+
+                    h1{
+                        font-size: 24px;
+                        text-align: center;
+                        margin-bottom: 42px;
+                    }
+
+                    .username-sec{
+                        margin-bottom: @gap-large;
+                    }
+
+                    .password-sec, .yanzm-sec, .rememberme-sec{
+                        margin-bottom: @gap-normal;
+                        position: relative;
+                        height: 36px;
+                    }
+
+                    .yanzm-sec {
+                        .captcha-img{
+                            position: absolute;
+                            right: 2px;
+                            top: 2px;
+
+                            img{
+                                height: 32px;
+                            }
+                        }
+                    }
+
+                    .error-msg-sec{
+                        color: @color-danger;
+                        position: absolute;
+                        right: 0;
+                        top: 12px;
+                        font-size: 12px;
+                    }
+
+                    .btn-login-sec{
+                        button{
+                            font-size: @font-size-large;
+                            width: 100%;
+                            height: 42px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #particles-js{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.reset-password {
+    :global {
+        .rc-input {
+            padding-left: 8px !important;
+        }
+    }
+}
+.reset-password-title {
+    margin-top: -@gap-xxxlarge;
+    margin-bottom: @gap-xlarge;
+}
